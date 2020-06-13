@@ -1,0 +1,50 @@
+.card{
+    @include flex(flex-start, stretch, column);
+    background-color: $white;
+    max-width: 373px;
+    padding-bottom: 30px;
+    height: 514px;
+    &:not(:last-child){
+        margin-right: 30px;
+    }    
+    &__image{
+        width: 373px;
+        height: 243px;
+        &-wrapper{
+            width: 373px;
+            height: 243px;
+        }
+    }
+    &__title{
+        @include text($H100, 700, $button);
+        font-family: $second-font;
+        text-transform: uppercase;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 23px;
+    }
+    &__subtitle{
+        @include text($H50, 400, $button);
+        margin-bottom: 35px;
+        margin-left: 23px;
+    }
+    &__wrapper{
+        @include flex(flex-start, center, row);
+        margin-left: 23px;
+        &-box{
+            position: relative;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        &-image{
+            border-radius: 50%;
+        }
+        &-author{
+            @include text($H50, 500, $button);
+            text-transform: uppercase;
+        }
+        &-data{
+            @include text($H10, 500,  $blue);
+        }
+    }
+}

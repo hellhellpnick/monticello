@@ -1,0 +1,35 @@
+.header{
+    position: relative;
+    z-index: 0;
+    background-image: url("../images/header.png"), $simple-bg-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 50px;
+.container{
+    &__wrapper{
+      @include flex(space-around, center, row);
+      margin-bottom: 260px;
+    }
+}
+
+.header__slider{
+    @include flex(center, center, row);
+    z-index: 100;
+    &-wrapper{
+        @include flex(center, center, column);        
+    }
+    &-title{
+        @include text($H300, 700, $white);
+        text-transform: uppercase;
+        font-family: "gotham";
+        letter-spacing:5px;
+        margin-bottom: 40px;
+    }
+    &-text{
+        @include text($H50, 400, $white);
+        font-family: "gotham";
+        text-transform: uppercase;
+        letter-spacing:5px;
+    }
+}}

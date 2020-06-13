@@ -1,0 +1,27 @@
+.footer{
+    position: relative;
+    background-image: url("../images/footer.png"), $get-bg-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max-content;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    &__content{
+        @include flex(space-between, stretch, row);
+        margin-bottom: 40px;
+        &-text{
+            @include text($H10, 400, $white);
+            margin-right: 15px;
+            &:nth-child(3){
+                margin-right: 5px;
+            }
+        }
+        &-svg{
+            @include svg(15px, $white);
+            margin-right: 5px;
+        }
+        &--inline{
+            justify-content: flex-start;
+        }
+    }
+}

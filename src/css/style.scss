@@ -1,0 +1,28 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+@import url("../fonts/gothambook.css");
+@import url("../fonts/gothamBold.css");
+
+//core
+@import "core/vars";
+@import "core/common";
+@import "core/inheritance";
+@import "core/mixin";
+
+//components
+@import "components/header.scss";
+@import "components/about.scss";
+@import "components/latest_news.scss";
+@import "components/gallery.scss";
+@import "components/map.scss";
+@import "components/contact.scss";
+@import "components/footer.scss";
+
+//common
+@import "components/common/navigation.scss";
+@import "components/common/list-gallery.scss";
+@import "components/common/list-contact.scss";
+@import "components/common/button.scss";
+@import "components/common/card.scss";
+@import "components/common/form.scss";
+@import "components/common/arrow.scss";

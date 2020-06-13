@@ -1,0 +1,28 @@
+.list-gallery{
+    list-style: none;
+    @include flex(flex-start, stretch, row);
+    margin-bottom: 60px;
+    &__item{
+        margin-right: 10px;
+        &-img{
+            max-width: 275px;
+            height: 214;
+        }
+        &--1{
+            max-width: 583px;
+            height: 421px;
+        }
+        &--2{
+            max-width: 275px;
+            height: 214;
+        }
+        
+    }
+    &__box{
+        @include flex(flex-start, stretch, row);
+        flex-wrap: wrap;
+        &-item{
+            margin-right: 10px;
+        }
+}
+}

@@ -1,0 +1,17 @@
+.form-input{
+    border: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba($button, 0.5);
+    width: 310px;
+    outline: none;
+    @include text($H50, 400, $button);
+    margin-bottom: 30px;
+    transition: all 0.2s ease;
+    &:placeholder-shown{
+        @include text($H50, 400, $button);
+    }
+    &:hover{
+        border-color: $button;
+    }
+    
+}

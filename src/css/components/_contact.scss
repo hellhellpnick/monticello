@@ -1,0 +1,32 @@
+.contact{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    background-color: #fff;
+    left: 30%;
+    top: 515%;
+    width: 770px;
+    padding: 0 60px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    &__title{
+        @include text($H200, 400, $button);
+        font-family: $second-font;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 60px;
+        &:before{
+            @include line(100px, $button);
+            }
+    }
+    &__info{
+        @include flex(flex-start, stretch, row)
+    }
+    &__form{
+        @include flex(flex-start, stretch, column);
+    }
+}
+.box{
+    @include flex(space-between, stretch
+    , row)
+}

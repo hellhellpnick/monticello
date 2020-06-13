@@ -1,0 +1,74 @@
+.about{
+    padding-top: 100px;
+    position: relative;
+    &__title{
+        @include text($H200, 700, $button);
+        font-family: "gotham";
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 170px;
+        &:before{
+            @include line(100px, $button);
+        }
+    }
+    &__container{
+        @include flex(space-between, center, row);
+        margin-bottom: 200px;
+        &:last-child{
+            flex-direction: row-reverse;
+        }
+    }
+    &__wrapper{
+        @include flex(flex-start, stretch, column);
+        &-title{
+            @include text($H200, 700, $button);
+            font-family: $second-font;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &-subtitle{
+            @include text($H100, 400, $button);
+            font-family: $second-font;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        &-text{@include text($H50, 400, $button);
+            font-family: $base-font;
+            margin-bottom: 35px;
+            max-width: 460px;
+        }
+    }
+    &__box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-author{
+            @include text($H50, 400, $button);
+            font-style: italic;
+        }
+        &-svg{
+            @include svg(20px, $purple);
+            margin-right: 10px;
+        }
+    }
+    &__image{
+        &-block{
+            position: absolute;
+            width: 585px;
+            height: 470px;
+            background-color: $blue;
+            z-index: -1;
+            left: 0;
+            top: 300px;            
+            &--purple{
+                position: absolute;
+                width: 585px;
+                height: 470px;
+                background-color: $purple;
+                z-index: -1;
+                right: 0;
+                bottom: 70px;  
+            }
+        }
+    }
+}

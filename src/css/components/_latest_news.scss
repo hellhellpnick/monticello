@@ -1,0 +1,22 @@
+.news{
+    position: relative;
+    background-image: url("../images/header.png"), $latest-bg-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-bottom: 200px;
+    padding-top: 100px; &__title{
+        @include text($H200, 400, $white);
+        font-family: "gotham";
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 80px;
+        &:before{
+            @include line(100px, $white);
+        }
+    }
+    &__slider{
+        display: flex;
+        flex-direction: row;
+    }
+}

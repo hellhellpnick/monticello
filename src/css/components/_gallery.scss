@@ -1,0 +1,14 @@
+.gallery{
+    padding-top: 100px;
+    padding-bottom: 250px;
+    &__title{
+        @include text($H200, 400, $button);
+        font-family: $second-font;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 100px;
+        &:before{
+            @include line(100px, $button);
+            }
+        }
+    }

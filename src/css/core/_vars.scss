@@ -1,0 +1,38 @@
+//color
+$white: #fff;
+$blue: #55b7ff;
+$purple: #7e5aff;
+$button: #2c4058;
+
+//bg-color
+$latest-bg-color: linear-gradient(to right, #3498e0 0%, #24ccfa 100%);
+$get-bg-color: linear-gradient(to right top, #55b7ff 0%, #7e5aff 75%);
+$simple-bg-color: linear-gradient(to right top, #55b7ff 0%, #7e5aff 100%);
+
+//font-family
+$base-font: 'Open Sans', sans-serif;
+$second-font: "gotham";
+
+//font-size
+@function calcRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+
+$H10: calcRem(14px);
+$H50: calcRem(18px);
+$H100: calcRem(22px);
+$H200: calcRem(44px);
+$H300: calcRem(80px);
+
+//width
+$max-width: 1173px;
+
+$screen-iphone: 375px;
+$screen-iphone-plus: 414px;
+$screen-tablet: 768px;
+$screen-desktop: 1024px;
+$screen-desktop-large: 1280px;
+$screen-hd: 1366px;
+$screen-fullhd: 1440px;
+$screen-retina: 1660px;
