@@ -2,6 +2,11 @@
     z-index:-1;
     list-style: none;
     @include flex(flex-start, stretch, row);
+    @media screen and (max-width: $screen-tablet)
+    {
+        align-items: center;
+        justify-content: center;
+    }
     flex-wrap: wrap; 
     margin-bottom: 60px;
     &__item{
@@ -32,10 +37,14 @@
         &--1{
             max-width: 583px;
             height: 421px;
+            @media screen and (max-width: $screen-tablet){
+            max-width: 275px;
+            height: 214px;
+            }
         }
         &--2{
             max-width: 275px;
-            height: 214;
+            height: 214px;
         }
         
     }
@@ -45,5 +54,10 @@
         &-item{
             margin-right: 10px;
         }
+        @media screen and (max-width: $screen-tablet)
+    {
+        align-items: center;
+        justify-content: center;
+    }
 }
 }

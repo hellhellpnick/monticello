@@ -1,5 +1,4 @@
 .about{
-    z-index:-1;
     padding-top: 100px;
     position: relative;
     &__title{
@@ -15,9 +14,8 @@
     &__container{
         @include flex(space-between, center, column);
         &:last-child{
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
-        margin-bottom: 200px;
         @media screen and (min-width: $screen-tablet){
             flex-direction: row;
             &:last-child{
@@ -63,16 +61,21 @@
     }
     &__image{
         max-width: 585px;
+        margin-bottom: 50px;
         &-block{
-            position: absolute;
             max-width: 585px;
+            &--blue{
+            position: absolute;
+            width: 585px;
             height: 470px;
             background-color: $blue;
             z-index: -1;
             left: 0;
-            top: 300px;         
-            @include padding-hack(55%);   
-            background-color: red;
+            top: 300px;
+            @media screen and (max-width: $screen-tablet){
+                display:none;
+            }
+            }
             &--purple{
                 position: absolute;
                 width: 585px;
@@ -81,6 +84,9 @@
                 z-index: -1;
                 right: 0;
                 bottom: 70px;  
+                @media screen and (max-width: $screen-tablet){
+                display:none;
+                }
             }
         }
     }

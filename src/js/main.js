@@ -21,12 +21,21 @@ function SliderLatest() {
         prevArrow: $(".arrow-left"),
         nextArrow: $(".arrow-right"),
         dotsClass: 'card-dots',
+        breakpoint: 1175,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            prevArrow: false,
+            nextArrow: false,
+        },
+        breakpoint: 764,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
     });
 }
-
-$(document).on('ready', function () {
-    initSlider();
-    SliderLatest();
+function nav() {
     $(document).delegate('.open', 'click', function (event) {
         $(this).addClass('oppenned');
         event.stopPropagation();
@@ -38,4 +47,9 @@ $(document).on('ready', function () {
         $('.open').removeClass('oppenned');
         event.stopPropagation();
     });
+}
+$(document).on('ready', function () {
+    initSlider();
+    SliderLatest();
+    nav();
 });

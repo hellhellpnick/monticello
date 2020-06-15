@@ -1,6 +1,6 @@
 .contact{
-    position: absolute;
-    z-index: -1;
+    position: static;
+    z-index: 0;
     background-color: #fff;
     margin: 0 auto;
     left: 0; 
@@ -11,8 +11,8 @@
     padding: 0 60px;
     padding-bottom: 80px;
     padding-top: 50px;
-    @media screen and (max-width: $screen-tablet){
-        position: static;
+    @media screen and (min-width: $screen-tablet){
+        position: absolute;
     }
     &__title{
         @include text($H200, 400, $button);
