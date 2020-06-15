@@ -1,35 +1,54 @@
 .header{
     position: relative;
-    z-index: 0;
     background-image: url("../images/header.png"), $simple-bg-color;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: max-content;
     padding-top: 50px;
-.container{
-    &__wrapper{
-      @include flex(space-around, center, row);
-      margin-bottom: 260px;
+    padding-bottom: 22%;
+    @media screen  and (max-width: $screen-tablet){
+        padding-top: 200px;
     }
-}
-
-.header__slider{
+    &__slider{
     @include flex(center, center, row);
     z-index: 100;
     &-wrapper{
-        @include flex(center, center, column);        
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; 
     }
-    &-title{
-        @include text($H300, 700, $white);
-        text-transform: uppercase;
-        font-family: "gotham";
-        letter-spacing:5px;
-        margin-bottom: 40px;
+        &-title{
+            @include text($H300, 700, $white);
+            text-transform: uppercase;
+            font-family: "gotham";
+            letter-spacing:5px;
+            margin-bottom: 40px;
+        }
+        &-text{
+            @include text($H50, 400, $white);
+            font-family: "gotham";
+            text-transform: uppercase;
+            letter-spacing:5px;
+        }
     }
-    &-text{
-        @include text($H50, 400, $white);
-        font-family: "gotham";
-        text-transform: uppercase;
-        letter-spacing:5px;
-    }
-}}
+}
+.container{
+    &__wrapper{
+      @include flex(space-between, center, row);
+        &--nav{
+            margin-bottom: 260px;
+            @media screen and (max-width: $screen-tablet){
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100px;
+                z-index: 11;
+                background-image: $simple-bg-color;
+                padding-left: 10px;
+            }
+        }
+    }    
+}

@@ -1,5 +1,6 @@
 .footer{
     position: relative;
+    z-index: -1;
     background-image: url("../images/footer.png"), $get-bg-color;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,6 +20,12 @@
         &-svg{
             @include svg(15px, $white);
             margin-right: 5px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            &:hover{
+                fill: pink;
+                transform: scale(1.2);
+            }
         }
         &--inline{
             justify-content: flex-start;

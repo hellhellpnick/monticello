@@ -1,14 +1,19 @@
 .contact{
     position: absolute;
-    display: block;
-    z-index: 1;
+    z-index: -1;
     background-color: #fff;
-    left: 30%;
-    top: 515%;
-    width: 770px;
+    margin: 0 auto;
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    bottom: 270px;
+    max-width: 770px;
     padding: 0 60px;
     padding-bottom: 80px;
     padding-top: 50px;
+    @media screen and (max-width: $screen-tablet){
+        position: static;
+    }
     &__title{
         @include text($H200, 400, $button);
         font-family: $second-font;
@@ -20,13 +25,19 @@
             }
     }
     &__info{
-        @include flex(flex-start, stretch, row)
+        @include flex(flex-start, stretch, row);
     }
     &__form{
         @include flex(flex-start, stretch, column);
+        &:valid .button--contact{
+            visibility: visible;
+            opacity: 1;
+        }
     }
+    
 }
 .box{
     @include flex(space-between, stretch
-    , row)
+    , row);
+    flex-wrap: wrap;
 }

@@ -1,35 +1,47 @@
 .list{
     list-style: none;
-    @include flex(space-between, center, row);
+    @include flex(space-between, center, column);
+    @media screen and (min-width: $screen-tablet){
+        flex-direction: row;
+    }
+    margin-right: 70px;
     &__item{
         transition: all 0.2s ease;
         cursor: pointer;
         &:hover svg{
             fill: #fff;
-        }&:active svg{
-            fill: #fff;
-        }
-        &:not(:last-child){
+        
+        }&:not(:last-child){
             margin-right: 70px;
-            
         }
+        &-link{
         @include text($H10, 500, $white);
         text-transform: uppercase;
         font-family: $second-font;
+        }
         &-wrapper{
             margin-right: 15px;
             border-radius: 50%;
+            @media screen and (max-width: $screen-tablet){
+                display: none;
+                visibility: hidden;
+            }
+            
         }
         &-svg{
             @include svg(12px, transparent);
             border: 2px solid #fff;
             border-radius: 50%;
-            transition: all 0.2s ease;            
+            transition: all 0.2s ease;   
+            @media screen and (max-width: $screen-tablet){
+                display: none;
+            }         
         }
     }
 }
 .list-icon{
     list-style: none;
+    z-index: 18;
     @include flex(space-between, center, row);
     &__item{
         transition: all 0.5s ease;
@@ -41,4 +53,9 @@
             transform: scale(1.1);
         }
     } 
+    @media screen and (max-width: $screen-tablet){
+        position: absolute;
+        bottom: 40px;
+        left: 50px;
+    }
 }

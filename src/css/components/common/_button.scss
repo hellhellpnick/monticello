@@ -9,6 +9,7 @@
     border: 1px solid $button;
     max-width: 200px;
     transition: all 0.5s ease;
+    cursor: pointer;
     &:hover{
         transform: scale(1.1);
     }
@@ -20,5 +21,8 @@
         position: relative;
         left: 170px;
         width: 140px;
+        background-color: transparent;
+        visibility: hidden;
+        opacity: 0;
     }
 }

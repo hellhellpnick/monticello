@@ -1,0 +1,97 @@
+
+.cls{
+    z-index: 12;
+    position: absolute;
+}
+@media screen and (max-width: $screen-tablet){
+    .open{
+        padding: 10px 0;
+        z-index: 1000;
+        position: fixed;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        display: block;
+        cursor: pointer;
+        z-index: 100;
+        transition: opacity 0.2s linear;
+        &:hover{
+            opacity: 1;
+        }
+        span{
+            height: 4px;
+            width: 40px;
+            border-radius: 40px;
+            background-color: $white;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            &:nth-child(1){
+                margin-top: 10px;
+                z-index: 9;
+            }
+            &:nth-child(2){
+                margin-top: 25px;
+            }
+            &:nth-child(3){
+                margin-top: 40px;
+            }
+        }
+    }
+    .sub-menu{
+        z-index: 12;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            height: 0;
+            width: 0;
+            right: 0;
+            top: 0;
+            position: absolute;
+            background-image: linear-gradient(to right top, rgba(#55b7ff,0.8) 0%, rgba(#7e5aff, 0.8) 75%);
+            border-radius: 50%;
+            z-index: 18;
+            overflow: hidden;
+            li{
+                margin-bottom: 100px;
+                margin-right: -160px;
+                transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                &:first-child{
+                    margin-top: 200px;
+                }
+            &:nth-child(4){
+                margin-right: 40px;
+            }
+            }
+        }
+    
+        .oppenned{
+            z-index: 12;
+            .sub-menu{
+                opacity: 1;
+                height: 800px;
+                width: 400px;
+            }
+            span:nth-child(2){
+                overflow: visible;
+            }
+            span:nth-child(1), span:nth-child(3){
+                z-index: 100;
+                transform: rotate(45deg);
+            }
+            span:nth-child(1){
+                transform: rotate(45deg) translateY(12px) translateX(12px);
+            }
+            span:nth-child(2){
+                height: 800px;
+                width: 400px;
+                right: -160px;
+                top: -160px;
+                border-radius: 50%;
+                background-image: linear-gradient(to right, rgba(#3498e0, 0.9) 0%, rgba(#24ccfa,0.9) 100%);
+            }
+            span:nth-child(3){			
+                transform: rotate(-45deg) translateY(-10px) translateX(10px);
+            }
+    }
+}

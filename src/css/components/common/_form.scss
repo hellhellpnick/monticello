@@ -1,5 +1,6 @@
 .form-input{
     border: none;
+    z-index: 0;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba($button, 0.5);
     width: 310px;
@@ -13,5 +14,12 @@
     &:hover{
         border-color: $button;
     }
-    
+    &:invalid:not(:placeholder-shown){
+        border-color: red;
+        opacity: 1;
+    }
+    &:valid{
+        border-color: green;
+        opacity: 1;
+    }
 }

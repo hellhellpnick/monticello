@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact" id="contact">
     <h2 class="contact__title">get in touch</h2>
     <div class="box">
         <div class="contact__info">
@@ -29,10 +29,10 @@
                 </li>
             </ul>
         </div>
-        <div class="contact__form">
-            <input class="form-input" type="text" placeholder="Mollie Medina">
-            <input class="form-input" type="email" placeholder="Email">
-            <a href="#" class="button button--contact">Submit</a>
-        </div>
+        <form class="contact__form">
+            <input class="form-input" type="text" placeholder="Mollie Medina" maxlength="5" required>
+            <input class="form-input" type="email" placeholder="Email" required>
+            <button href="#" class="button button--contact">Submit</button>
+        </form>
     </div>
 </section>

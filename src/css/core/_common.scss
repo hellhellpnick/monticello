@@ -6,14 +6,16 @@
   }
   
   body, a, button, input {
+    position: relative;
     font-family: $base-font;
   }
-  
   a {
     text-decoration: none;
   }
   
-  
+img{
+  z-index: 0;
+}
 .container{
   @extend %container;
 }

@@ -1,9 +1,10 @@
 .news{
     position: relative;
+    z-index:-1;
     background-image: url("../images/header.png"), $latest-bg-color;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: max-content;
     padding-bottom: 200px;
     padding-top: 100px; &__title{
         @include text($H200, 400, $white);

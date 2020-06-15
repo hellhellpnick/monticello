@@ -1,4 +1,5 @@
 .about{
+    z-index:-1;
     padding-top: 100px;
     position: relative;
     &__title{
@@ -12,14 +13,23 @@
         }
     }
     &__container{
-        @include flex(space-between, center, row);
-        margin-bottom: 200px;
+        @include flex(space-between, center, column);
         &:last-child{
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
+        }
+        margin-bottom: 200px;
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            &:last-child{
+                flex-direction: row-reverse;
+            }
         }
     }
     &__wrapper{
         @include flex(flex-start, stretch, column);
+        &:last-child{
+            margin-bottom: 80px;
+        }
         &-title{
             @include text($H200, 700, $button);
             font-family: $second-font;
@@ -52,14 +62,17 @@
         }
     }
     &__image{
+        max-width: 585px;
         &-block{
             position: absolute;
-            width: 585px;
+            max-width: 585px;
             height: 470px;
             background-color: $blue;
             z-index: -1;
             left: 0;
-            top: 300px;            
+            top: 300px;         
+            @include padding-hack(55%);   
+            background-color: red;
             &--purple{
                 position: absolute;
                 width: 585px;
