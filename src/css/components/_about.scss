@@ -55,15 +55,21 @@
             font-style: italic;
         }
         &-svg{
-            @include svg(20px, $purple);
+            @include svg(20px, #000);
             margin-right: 10px;
+            transition: all 0.2s ease;
+            &:hover{
+                fill: $purple;
+            }
         }
     }
     &__image{
-        max-width: 585px;
-        margin-bottom: 50px;
-        &-block{
+        max-width: 100%;
+        margin-bottom: 100px;
+        &-wrapper{
             max-width: 585px;
+        }
+        &-block{
             &--blue{
             position: absolute;
             width: 585px;

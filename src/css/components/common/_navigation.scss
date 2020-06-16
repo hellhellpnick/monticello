@@ -1,15 +1,24 @@
-.list{
+.list-navigation{
     list-style: none;
     @include flex(space-between, center, column);
-    @media screen and (min-width: $screen-tablet){
+    @media screen and (min-width: 1200px){
         flex-direction: row;
     }
+    
     margin-right: 70px;
     &__item{
         transition: all 0.2s ease;
         cursor: pointer;
+        @include flex(flex-start, center, row);
+        &-active{
+            svg{
+                fill: #fff;
+                background-color: #fff;
+            }
+        }
         &:hover svg{
             fill: #fff;
+            background-color: #fff;
         
         }&:not(:last-child){
             margin-right: 70px;
@@ -22,7 +31,7 @@
         &-wrapper{
             margin-right: 15px;
             border-radius: 50%;
-            @media screen and (max-width: $screen-tablet){
+            @media screen and (max-width: 1200px){
                 display: none;
                 visibility: hidden;
             }
@@ -33,7 +42,7 @@
             border: 2px solid #fff;
             border-radius: 50%;
             transition: all 0.2s ease;   
-            @media screen and (max-width: $screen-tablet){
+            @media screen and (max-width: 1200px){
                 display: none;
             }         
         }
@@ -53,13 +62,13 @@
             transform: scale(1.1);
         }
     } 
-    @media screen and (max-width: $screen-tablet){
+    @media screen and (max-width: 1200px){
         position: absolute;
         bottom: 40px;
         left: 50px;
     }
     &--footer{
-        @media screen and (max-width: $screen-tablet){
+        @media screen and (max-width: 1200px){
             position: static;
             align-items: center;
             padding-top: 20px;

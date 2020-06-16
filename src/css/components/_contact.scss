@@ -37,7 +37,10 @@
     
 }
 .box{
-    @include flex(space-between, stretch
+    @include flex(space-between, center
     , row);
     flex-wrap: wrap;
+    @media screen and (max-width: $screen-tablet){
+        justify-content: center;
+    }
 }

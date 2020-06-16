@@ -10,7 +10,7 @@
         padding-top: 50px;
     }
     &__content{
-        @include flex(space-between, stretch, row);
+        @include flex(space-around, center row);
         margin-bottom: 40px;
         @media screen and (max-width: $screen-tablet){
             flex-direction: column;
@@ -45,6 +45,10 @@
         }
         &--inline{
             justify-content: flex-start;
+            padding-left: 10px;
+            @media screen and (min-width: $screen-desktop){
+                padding-left: 195px;
+            }
         }
     }
 }

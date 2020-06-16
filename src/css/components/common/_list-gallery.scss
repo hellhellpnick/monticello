@@ -2,10 +2,11 @@
     z-index:-1;
     list-style: none;
     @include flex(flex-start, stretch, row);
-    @media screen and (max-width: $screen-tablet)
-    {
-        align-items: center;
+    @media screen and (max-width: 1174px){
+        display: flex;
+        flex-wrap: wrap; 
         justify-content: center;
+        align-items: center;
     }
     margin-bottom: 60px;
     &__item{
@@ -36,7 +37,9 @@
         &--1{
             max-width: 583px;
             height: 435px;
+            margin-right: -20px;
             @media screen and (max-width: $screen-tablet){
+            margin-right: 0;
             max-width: 275px;
             height: 214px;
             }
@@ -48,7 +51,7 @@
         
     }
     &__box{
-        @include flex(flex-start, stretch, row);
+        @include flex(center, stretch, row);
         flex-wrap: wrap;
         &-item{
             margin-right: 10px;

@@ -1,21 +1,27 @@
 .arrow-right{
     position: absolute;
     top: 50%;
-    right: 15%;
+    right: 50px;
     cursor: pointer;
     transition: all 0.5s ease;
     &:hover{
         transform: translateX(10px);
     }
+    @media screen and (max-width: 1175px){
+        display: none !important;
+    }
 }
 .arrow-left{
     position: absolute;
     top: 50%;
-    left: 15%;
+    left: 50px;
     cursor: pointer;
     transition: all 0.5s ease;
     &:hover{
         transform: translateX(-10px);
+    }
+    @media screen and (max-width: 1175px){
+        display: none !important;
     }
 }
 .arrow-down{

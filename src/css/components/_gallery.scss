@@ -2,6 +2,9 @@
     z-index:-1;
     padding-top: 100px;
     padding-bottom: 250px;
+    @media screen and (max-width: $screen-tablet){
+        padding-bottom: 100px;
+    }
     &__title{
         @include text($H200, 400, $button);
         font-family: $second-font;

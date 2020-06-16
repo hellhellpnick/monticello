@@ -1,0 +1,29 @@
+.back-top{
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #CEDF7F;
+    box-shadow: 1px 1px 10px 2px rgb(77, 75, 75);
+    padding-top: 5px;
+    cursor: pointer;
+    @include flex(center, center, column);
+    opacity: 0.2;
+    transition: all 0.5s ease;
+    &:hover{
+        opacity: 1;
+        svg{
+            transform: rotate(360deg);
+        }
+    }
+    &__svg{
+        @include svg(20px, #C06DC0);
+        transition: all 0.5s ease;
+    }
+    &__text{
+        @include text($H10, 400, #C06DC0);
+        padding: 5px 0;
+        text-transform: uppercase;
+    }
+}

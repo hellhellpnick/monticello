@@ -1,11 +1,12 @@
 .card{
     @include flex(flex-start, stretch, column);
+    position: relative;
     background-color: $white;
-    width: 373px;
+    width: 373px !important;
     padding-bottom: 30px;
     height: 514px;
     &:not(:last-child){
-        margin-right: 30px;
+        margin-right: 20px;
     }   
     &__box{
         position: relative;
@@ -18,11 +19,12 @@
         }
     } 
     &__image{
-        max-width: 361px;
-        height: 243px;
+        max-width: 100%;
+        max-height: 100%;
         &-wrapper{
-            max-width: 361px;
-            height: 243px;
+            position: relative;
+            max-width: 373px;
+            max-height: 243px;
         }
     }
     &__icon{
@@ -60,22 +62,20 @@
             margin-right: 20px;
             border-radius: 50%;
         }
-        &-image{
-            border-radius: 50%;
-        }
-        &-author{
-            @include text($H50, 500, $button);
-            text-transform: uppercase;
-        }
-        &-data{
-            @include text($H10, 500,  $blue);
-        }
+    }
+    &__author{
+        @include text($H50, 500, $button);
+        text-transform: uppercase;
+    }
+    &__date{
+        @include text($H10, 500,  $blue);
     }
 }
 
 .card-dots { 
+    z-index: 2;
     position: absolute; 
-    bottom: -60px; 
+    bottom: 450px; 
     list-style: none; 
     display: block; 
     text-align: center; 
@@ -140,3 +140,12 @@
     }
     }
 }
+.card-dots li.slick-active button::before,
+.card-dots li.slick-active button:hover {
+    padding: 0;
+    color: transparent;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    @include size(10px);
+  }
