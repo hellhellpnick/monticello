@@ -77,6 +77,7 @@
             .burger:nth-child(1), .burger:nth-child(3){
                 z-index: 100;
                 transform: rotate(45deg);
+                padding: 5px;
             }
             .burger:nth-child(1){
                 transform: rotate(45deg) translateY(12px) translateX(12px);
