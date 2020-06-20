@@ -27,6 +27,9 @@
         width: 140px;
         background-color: transparent;
         visibility: hidden;
+        @media screen and (max-width: $screen-tablet){
+            left: auto;
+        }
         opacity: 0;
     }
 }
